@@ -1,0 +1,45 @@
+{
+    "name": "chaplean/bundle",
+    "description": "The Bundle base to fork",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chaplean",
+            "homepage": "http://chaplean.com/"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://satis.chaplean.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/symfony": "2.7.*",
+        "doctrine/orm": "^2.4.8",
+        "doctrine/doctrine-bundle": "~1.4",
+        "symfony/assetic-bundle": "~2.3",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
+        "sensio/distribution-bundle": "~4.0",
+        "sensio/framework-extra-bundle": "^3.0.2"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "~2.3",
+        "chaplean/unit-bundle": "1.7.*",
+        "chaplean/coding-standard": "1.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Chaplean\\Bundle\\BundleNameBundle": "",
+            "SymfonyStandard": "app/"
+        }
+    },
+    "target-dir" : "Chaplean/Bundle/BundleNameBundle",
+    "config": {
+        "bin-dir": "bin",
+        "discard-changes": true
+    }
+}

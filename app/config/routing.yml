@@ -1,0 +1,4 @@
+chaplean_BundleName:
+    resource: "@ChapleanBundleNameBundle/Resources/config/routing.yml"
+    prefix:   /
+
