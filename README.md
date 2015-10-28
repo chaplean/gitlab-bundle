@@ -18,7 +18,11 @@ Installation step process:
 
 Add the fork project in scrutinizer
 
+Remove the ssh key automaticaly added to bitbucket project deployement keys and add the scrutinizer key to the organisation keys.
+
 # Codeship
+
+Remove the ssh key automaticaly added to bitbucket project deployement keys and add the codeship key to the organisation keys.
 
 Config global:
 
