@@ -1,48 +1,48 @@
 {
     "name": "chaplean/bundle",
-    "description": "The Bundle base to fork",
-    "type": "symfony-bundle",
     "license": "MIT",
+    "type": "symfony-bundle",
+    "description": "The Bundle base to fork",
     "authors": [
         {
             "name": "Chaplean",
-            "homepage": "http://chaplean.com/"
+            "homepage": "http://www.chaplean.com"
         }
     ],
     "autoload": {
         "psr-0": {
-            "Chaplean\\Bundle\\BundleNameBundle": "",
-            "SymfonyStandard": "app/"
-        }
+            "Chaplean\\Bundle\\BundleNameBundle": ""
+        },
+        "classmap": [
+            "app/AppKernel.php"
+        ]
     },
     "target-dir" : "Chaplean/Bundle/BundleNameBundle",
     "repositories": [
         {
             "type": "composer",
-            "url": "http://satis.chaplean.com"
+            "url": "https://satis.chaplean.com"
         }
     ],
     "require": {
         "php": ">=5.5.9",
-        "symfony/symfony": "2.7.*",
+        "symfony/symfony": "2.8.*",
         "doctrine/orm": "^2.4.8",
         "doctrine/doctrine-bundle": "~1.4",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
-        "sensio/distribution-bundle": "~4.0",
+        "sensio/distribution-bundle": "~5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3",
-        "chaplean/unit-bundle": "1.7.*",
-        "chaplean/coding-standard": "1.1.*"
+        "sensio/generator-bundle": "~3.0",
+        "chaplean/coding-standard": "1.1.*",
+        "chaplean/unit-bundle": "~2.0",
+        "satooshi/php-coveralls": "^1.0"
     },
     "scripts": {
-        "post-root-package-install": [
-            "SymfonyStandard\\Composer::hookRootPackageInstall"
-        ],
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
@@ -56,7 +56,10 @@
     },
     "config": {
         "bin-dir": "bin",
-        "discard-changes": true
+        "discard-changes": true,
+        "platform": {
+            "php": "5.5.9"
+        }
     },
     "extra": {
         "symfony-app-dir": "app",
@@ -65,11 +68,7 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "symlink",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml",
-            "keep-outdated": true
-        },
-        "branch-alias": {
-            "dev-master": "2.7-dev"
+            "file": "app/config/parameters.yml"
         }
     }
 }
