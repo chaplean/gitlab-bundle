@@ -1,7 +1,7 @@
 version: '2'
 services:
     application:
-        container_name: bundle-name_application
+        container_name: bundle-name_bundle_app
         build: .
         expose:
             - "9000"
@@ -10,7 +10,7 @@ services:
         links:
             - mysql:mysql
     mysql:
-        container_name: bundle-name_mysql
+        container_name: bundle-name_bundle_mysql
         image: chaplean/mysql
         volumes:
             - ./.db:/var/lib/mysql:rw
