@@ -3,43 +3,71 @@ Getting Started With Chaplean Bundle
 
 # Prerequisites
 
-##### Fork me !!!!!
+This version of the bundle requires Symfony 2.8+.
 
-# Initialization
+# Create my Bundle
 
-## 1. Coveralls
+1. Form me !
+1. Search **"BundleName"** and replace with bundle name in CamelCase
+1. Search **"bundle-name"** and replace with bundle name in lowercase with "-" if necessary
+1. Follow steps behind
+
+## Initialization
+
+### 1. SSH Key
+
+1. IMPORTANT: replace ssh key (each project needs to have his own key)
+1. Generate key without passphrase with `ssh-keygen` in `app/config/ssh` (replace old ones)
+1. Add generate key in Bitbucket with name **"Docker - BundleName Bundle"**
+
+### 2. Coveralls
 
 1. Add me on Coveralls.
 1. Update `.coveralls.yml` file with coveralls token.
 
-## 2. CodeShip
+### 3. CodeShip
 
 1. Add me on CodeShip.
-1. Move key deployment  `https://bitbucket.org/chaplean/<bundleName-bundle>/admin/deploy-keys/` in https://bitbucket.org/account/user/chaplean/ssh-keys/ with name
-`CodeShip - chaplean/<bundleName>-bundle`
-1. Config global:
-``` bash
-# Set php version through phpenv. 5.3, 5.4 and 5.5 available
-phpenv local 5.5
-# Copy files
-cp phpunit.xml.dist phpunit.xml
-cp app/config/parameters.yml.dist app/config/parameters.yml
-# Configuration
-echo "memory_limit = 512M" >> ~/.phpenv/versions/5.5/etc/php.ini
-echo "xdebug.max_nesting_level = 250" >> ~/.phpenv/versions/5.5/etc/php.ini
-# Install dependencies through Composer
-composer config -g github-oauth.github.com 7fa26c02ea1b016a956f5d774362096b6bf42d61
-composer install --prefer-dist --no-interaction --dev
-```
-4. Pipelines for CodeShip: **See Slack**
+1. If necessary, update `codeship-services.yml` or `codeship-steps.yml`
 
-## 3. Initialize git-flow
+## 4. git-flow
 
 1. Initialize git-flow in repository (cf [Git](https://docs.google.com/document/d/1oBOi_ODucIE0aBGMOnLLTZyzEw0vGT_X1lef0RjJBso/edit))
-1. Replace `BundleName` by name of bundle + files:
+1. Update files name for:
     * ChapleanBundleNameBundle.php
     * DependencyInjection/ChapleanBundleNameExtension.php
-2. Rename `chaplean/bundle` in `composer.json` with your bundle name
-3. Run `composer install`
-3. Run `cp vendor/chaplean/coding-standard/hooks/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit`
-3. Push ! ;)
+1. Rename `chaplean/bundle` in `composer.json` with your bundle name
+1. Make `docker exec bundle-name_application composer install`
+1. Run `cp vendor/chaplean/coding-standard/hooks/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit`
+
+### 5. README.md
+
+Replace the following content with content relative to your bundle.
+
+# Installation
+
+## 1. Composer
+
+```
+composer require chaplean/bundle-name-bundle
+```
+
+## 2. AppKernel.php
+
+Add
+```
+            new Chaplean\Bundle\MailerBundle\ChapleanBundleNameBundle(),
+```
+
+## 3. config.yml
+
+##### A. Import
+
+    - { resource: '@ChapleanBundleNameBundle/Resources/config/config.yml' }
+
+##### B. Configuration
+
+```
+chaplean_bundle-name:
+    test: false
+```
