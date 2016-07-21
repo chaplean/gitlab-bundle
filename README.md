@@ -63,7 +63,9 @@ Add
 
 ##### A. Import
 
+```
     - { resource: '@ChapleanBundleNameBundle/Resources/config/config.yml' }
+```
 
 ##### B. Configuration
 
