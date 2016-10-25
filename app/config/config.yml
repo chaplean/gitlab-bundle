@@ -22,6 +22,26 @@ framework:
     http_method_override: true
     profiler: { only_exceptions: false }
 
+## Twig Configuration
+#twig:
+#    debug:            '%kernel.debug%'
+#    strict_variables: '%kernel.debug%'
+#
+## Assetic Configuration
+#assetic:
+#    debug:          '%kernel.debug%'
+#    use_controller: '%use_assetic_controller%'
+#    bundles:        ['ChapleanSocialButtonsBundle']
+#    ruby: '%ruby.bin%'
+#    filters:
+#        cssrewrite: ~
+#        sass:
+#            bin: '%sass.bin%'
+#            apply_to: '\.scss'
+#        compass:
+#            bin: '%compass.bin%'
+#            no_line_comments: true
+
 monolog:
     handlers:
         main:

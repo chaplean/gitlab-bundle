@@ -7,7 +7,7 @@ This version of the bundle requires Symfony 2.8+.
 
 # Create my Bundle
 
-1. Form me !
+1. Fork me !
 1. Search **"BundleName"** and replace with bundle name in CamelCase
 1. Search **"bundle-name"** and replace with bundle name in lowercase with "-" if necessary
 1. Follow steps behind
@@ -43,6 +43,10 @@ This version of the bundle requires Symfony 2.8+.
 ### 5. README.md
 
 Replace the following content with content relative to your bundle.
+
+### 6. Assetic (optionnal)
+
+If you want to use assetic, you can add the bundle in composer and uncomment related lines in `config.yml` and `parameters.yml` files.
 
 # Installation
 

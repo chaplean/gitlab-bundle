@@ -29,6 +29,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Chaplean\Bundle\UnitBundle\ChapleanUnitBundle(),
             new Liip\FunctionalTestBundle\LiipFunctionalTestBundle(),
+//            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Chaplean\Bundle\BundleNameBundle\ChapleanBundleNameBundle(),
         );
 
