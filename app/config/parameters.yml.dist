@@ -13,3 +13,11 @@ parameters:
 
     locale: fr
     secret: ThatsChapleanBundleNameBun2le
+
+    data_fixtures_namespace: false
+
+#    use_assetic_controller: false
+#
+#    sass.bin: /usr/local/bin/sass
+#    compass.bin: /usr/local/bin/compass
+#    ruby.bin: /usr/bin/ruby
