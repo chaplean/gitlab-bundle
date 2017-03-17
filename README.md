@@ -7,7 +7,7 @@ This version of the bundle requires Symfony 2.8+.
 
 # Create my Bundle
 
-1. Form me !
+1. Fork me !
 1. Search **"BundleName"** and replace with bundle name in CamelCase
 1. Search **"bundle-name"** and replace with bundle name in lowercase with "-" if necessary
 1. Follow steps behind
