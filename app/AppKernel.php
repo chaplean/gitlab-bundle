@@ -25,11 +25,9 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
-            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Chaplean\Bundle\UnitBundle\ChapleanUnitBundle(),
             new Liip\FunctionalTestBundle\LiipFunctionalTestBundle(),
-//            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Chaplean\Bundle\BundleNameBundle\ChapleanBundleNameBundle(),
         );
 
