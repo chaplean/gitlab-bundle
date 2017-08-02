@@ -1,4 +1,4 @@
-FROM chaplean/phpunit
+FROM chaplean/php:7.1
 MAINTAINER Tom - Chaplean <tom@chaplean.coop>
 
 # Get SSH user key
