@@ -18,7 +18,7 @@ This version of the bundle requires Symfony 2.8+.
 ### 1. SSH Key
 
 1. IMPORTANT: replace ssh key (each project needs to have his own key)
-1. Generate key without passphrase with `ssh-keygen` in `app/config/ssh` (replace old ones)
+1. Generate key without passphrase with `ssh-keygen` in `private/ssh` (replace old ones)
 1. Add generate key in Bitbucket with name **"Docker - BundleName Bundle"**
 1. Add generate key in ~/.ssh/authorized_key2 on satis.chaplean.coop
 
