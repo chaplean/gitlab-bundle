@@ -11,6 +11,7 @@ This version of the bundle requires Symfony 2.8+.
 1. Search **"BundleName"** and replace with bundle name in CamelCase
 1. Search **"bundle-name"** and replace with bundle name in lowercase with "-" if necessary
 1. Follow steps behind
+1. If the bundle needs to be public, you have to remove **private/** folder and **auth.json**
 
 ## Initialization
 
