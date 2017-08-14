@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dc7576b96c12da5137f5ebb70a57bf0a",
-    "content-hash": "b4aae767a2211ab49d93bffbc2e65c6c",
+    "hash": "c1fd9c3fe8c5e7f89be5b786024d2e32",
+    "content-hash": "62727d0258e44a8ee6a2536e43446502",
     "packages": [
         {
             "name": "psr/container",
@@ -527,19 +527,21 @@
     "packages-dev": [
         {
             "name": "chaplean/codeship-scripts",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chaplean/codeship-scripts.git",
-                "reference": "f08d55ee5353c528259a115d26c188edeebe15ab"
+                "reference": "d3e6f7c8b3bfe486300f01e4085c4192344cd116"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chaplean/codeship-scripts/zipball/f08d55ee5353c528259a115d26c188edeebe15ab",
-                "reference": "f08d55ee5353c528259a115d26c188edeebe15ab",
+                "url": "https://api.github.com/repos/chaplean/codeship-scripts/zipball/d3e6f7c8b3bfe486300f01e4085c4192344cd116",
+                "reference": "d3e6f7c8b3bfe486300f01e4085c4192344cd116",
                 "shasum": ""
             },
             "bin": [
+                "bin/deploy.sh",
+                "bin/deploy-htaccess.sh",
                 "bin/phpunit.sh",
                 "bin/services-waiting.sh"
             ],
@@ -555,7 +557,7 @@
                 }
             ],
             "description": "Codeship scripts to automatically install in your bin directory",
-            "time": "2017-08-11 10:07:06"
+            "time": "2017-08-14 12:47:42"
         },
         {
             "name": "chaplean/coding-standard",
