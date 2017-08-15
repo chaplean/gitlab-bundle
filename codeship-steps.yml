@@ -1,7 +1,6 @@
 # Commands to execute in CodeShip
 - type: serial
-  services:
-  - application
+  service: application
   steps:
   - command: cp ./phpunit.xml.dist ./phpunit-default.xml
   - command: composer install --prefer-dist --no-interaction
