@@ -24,7 +24,6 @@
             <directory>.</directory>
 
             <exclude>
-                <directory>app</directory>
                 <directory>bin</directory>
                 <directory>DataFixtures</directory>
                 <directory>Resources</directory>
