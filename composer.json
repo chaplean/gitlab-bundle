@@ -16,7 +16,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "Tests/"
+            "Tests\\Chaplean\\Bundle\\BundleNameBundle\\": "Tests/"
         }
     },
     "repositories": [
