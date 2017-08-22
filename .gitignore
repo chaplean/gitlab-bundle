@@ -1,7 +1,6 @@
 # Managed by Composer
-/bin/*
-!bin/console
-/vendor/
+/bin
+/vendor
 
 # Assets and user uploads
 /web/bundles/
