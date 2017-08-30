@@ -25,7 +25,7 @@
 
             <exclude>
                 <directory>bin</directory>
-                <directory>DataFixtures</directory>
+                <directory>DataFixtures/Liip</directory>
                 <directory>Resources</directory>
                 <directory>Tests</directory>
                 <directory>var</directory>
