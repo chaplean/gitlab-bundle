@@ -3,7 +3,7 @@ Getting Started With Chaplean Bundle
 
 # Prerequisites
 
-This version of the bundle requires Symfony 2.8+.
+This version of the bundle requires Symfony 3.4+.
 
 # Create my Bundle
 
@@ -21,16 +21,6 @@ This version of the bundle requires Symfony 2.8+.
 1. Generate key without passphrase with `ssh-keygen` in `private/ssh` (replace old ones)
 1. Add generate key in Bitbucket with name **"Docker - BundleName Bundle"**
 1. Add generate key in ~/.ssh/authorized_key2 on satis.chaplean.coop
-
-### 2. Coveralls
-
-1. Add me on Coveralls.
-1. Update `.coveralls.yml` file with coveralls token.
-
-### 3. CodeShip
-
-1. Add me on CodeShip.
-1. If necessary, update `codeship-services.yml` or `codeship-steps.yml`
 
 ## 4. git-flow
 
@@ -54,22 +44,41 @@ If you want to use assetic, you can add the bundle in composer and uncomment rel
 
 ## 1. Composer
 
-```
+```console
 composer require chaplean/bundle-name-bundle
 ```
 
 ## 2. AppKernel.php
 
-Add
-```
+Then, enable the bundle by adding it to the list of registered bundles
+in the `app/AppKernel.php` file of your project:
+
+```php
+<?php
+// app/AppKernel.php
+
+// ...
+class AppKernel extends Kernel
+{
+    public function registerBundles()
+    {
+        $bundles = [
+            // ...
             new Chaplean\Bundle\MailerBundle\ChapleanBundleNameBundle(),
+        ];
+
+        // ...
+    }
+
+    // ...
+}
 ```
 
 ## 3. config.yml
 
 ##### A. Import
 
-```
+```yaml
     - { resource: '@ChapleanBundleNameBundle/Resources/config/config.yml' }
 ```
 
