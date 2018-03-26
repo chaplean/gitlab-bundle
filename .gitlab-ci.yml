@@ -19,10 +19,7 @@ before_script:
     - mkdir -p /root/.ssh
     - cp ./private/ssh/* /root/.ssh/
     - chmod 600 /root/.ssh/*
-#    - cp ./app/config/parameters_test.yml.dist ./app/config/parameters_test.yml
     - composer install --prefer-dist --no-interaction
-    - bundle install
-    - chmod -R +x ./bin/
 
 test:
     stage: test
