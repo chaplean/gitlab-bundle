@@ -25,6 +25,10 @@ test:
     stage: test
     script:
         - phpdbg -qrr ./bin/phpunit --configuration phpunit.xml.dist --colors=never --coverage-text
+    artifacts:
+        paths:
+            - coverage/
+        expire_in: 1 day
 
 deploy:
     stage: deploy
