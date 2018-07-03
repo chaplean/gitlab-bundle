@@ -10,7 +10,7 @@ This version of the bundle requires Symfony 3.4+.
 1. Fork me !
 1. Search **"BundleName"** and replace with bundle name in CamelCase
 1. Search **"bundle-name"** and replace with bundle name in lowercase with "-" if necessary
-1. Follow steps behind
+1. Follow steps bellow
 1. If the bundle needs to be public, you have to remove **private/** folder and **auth.json**
 
 ## Initialization
@@ -19,8 +19,8 @@ This version of the bundle requires Symfony 3.4+.
 
 1. IMPORTANT: replace ssh key (each project needs to have his own key)
 1. Generate key without passphrase with `ssh-keygen` in `private/ssh` (replace old ones)
-1. Add generate key in Bitbucket with name **"Docker - BundleName Bundle"**
-1. Add generate key in ~/.ssh/authorized_key2 on satis.chaplean.coop
+1. Add generated key in Gitlab with name **"bundle-name"**
+1. Add generated key in ~/.ssh/authorized_key2 on satis.chaplean.coop
 
 ## 4. git-flow
 
@@ -35,10 +35,6 @@ This version of the bundle requires Symfony 3.4+.
 ### 5. README.md
 
 Replace the following content with content relative to your bundle.
-
-### 6. Assetic (optionnal)
-
-If you want to use assetic, you can add the bundle in composer and uncomment related lines in `config.yml` and `parameters.yml` files.
 
 # Installation
 
@@ -64,7 +60,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             // ...
-            new Chaplean\Bundle\MailerBundle\ChapleanBundleNameBundle(),
+            new Chaplean\Bundle\BundleNameBundle\ChapleanBundleNameBundle(),
         ];
 
         // ...
