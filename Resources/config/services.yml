@@ -1,1 +1,42 @@
-#services:
+services:
+    app_gitlab.form.success_handler.webhook_pipeline:
+        class: Chaplean\Bundle\GitlabBundle\Form\Handler\WebhookPipelineSuccessHandler
+        arguments: ['@doctrine', '@app_gitlab.utility.pipeline', '@app_gitlab.utility.project', '@app_gitlab.utility.branch', '@app_gitlab.utility.coverage', '@app_gitlab.utility.coverage_report', '@event_dispatcher']
+
+    app_gitlab.utility.branch:
+        class: Chaplean\Bundle\GitlabBundle\Utility\BranchUtility
+        arguments: ['@doctrine']
+
+    app_gitlab.utility.coverage:
+        class: Chaplean\Bundle\GitlabBundle\Utility\CoverageUtility
+        arguments: ['@doctrine']
+
+    app_gitlab.utility.coverage_notification:
+        class: Chaplean\Bundle\GitlabBundle\Utility\CoverageNotificationUtility
+        arguments: ['@doctrine', '@guzzle.client.gitlab_api', '@router', '%application_host%', '%slack_coverage_notification_url%', '%chaplean_gitlab.config%']
+
+    app_gitlab.utility.coverage_report:
+        class: Chaplean\Bundle\GitlabBundle\Utility\CoverageReportUtility
+        arguments: ['@gitlab_api', '@logger', '%chaplean_gitlab.config%', '%kernel.root_dir%', '%coverages_dir%']
+
+    app_gitlab.utility.pipeline:
+        class: Chaplean\Bundle\GitlabBundle\Utility\PipelineUtility
+        arguments: ['@gitlab_api', '@chaplean_form_handler.form_handler.form_handler']
+
+    app_gitlab.utility.project:
+        class: Chaplean\Bundle\GitlabBundle\Utility\ProjectUtility
+        arguments: ['@doctrine']
+
+    gitlab_token_authenticator:
+        class:  Chaplean\Bundle\GitlabBundle\Security\GitlabTokenAuthenticator
+        public: false
+
+    gitlab_token_user_provider:
+        class: Chaplean\Bundle\GitlabBundle\Security\GitlabTokenUserProvider
+        arguments: ['%gitlab_webhook_token%']
+
+    app_gitlab.listener.cart_canceled:
+        class: Chaplean\Bundle\GitlabBundle\EventListener\CoverageSendListener
+        arguments: ['@app_gitlab.utility.coverage_notification']
+        tags:
+            - { name: kernel.event_listener, event: coverage.send, method: onCoverageSend }
