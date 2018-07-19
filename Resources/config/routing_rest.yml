@@ -1,0 +1,3 @@
+app_gitlab_webhook:
+    type: rest
+    resource: Chaplean\Bundle\GitlabBundle\Controller\Rest\WebhookController

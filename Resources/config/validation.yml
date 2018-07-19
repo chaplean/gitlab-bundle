@@ -1,0 +1,35 @@
+Chaplean\Bundle\GitlabBundle\Model\BuildModel:
+    properties:
+        id:
+            - NotBlank: ~
+        status:
+            - NotBlank: ~
+        stage:
+            - NotBlank: ~
+
+Chaplean\Bundle\GitlabBundle\Model\WebhookPipelineEventModel:
+    properties:
+        objectKind:
+            - EqualTo: 'pipeline'
+        objectAttributes:
+            - Valid: ~
+        project:
+            - Valid: ~
+
+Chaplean\Bundle\GitlabBundle\Model\PipelineModel:
+    properties:
+        id:
+            - NotBlank: ~
+        status:
+            - NotBlank: ~
+        branch:
+            - NotBlank: ~
+        sha:
+            - NotBlank: ~
+
+Chaplean\Bundle\GitlabBundle\Model\ProjectModel:
+    properties:
+        gitlabId:
+            - NotBlank: ~
+        name:
+            - NotBlank: ~

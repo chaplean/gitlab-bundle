@@ -1,0 +1,7 @@
+app_gitlab_coverage_report:
+    path:     /coverage/{sha}/{file}
+    defaults: { _controller: ChapleanGitlabBundle:CoverageReport:index }
+    methods:  GET
+    requirements:
+        sha:  "[a-fA-F0-9]+"
+        file: ".*"

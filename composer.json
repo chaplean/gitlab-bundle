@@ -1,8 +1,8 @@
 {
-    "name": "chaplean/bundle-name-bundle",
+    "name": "chaplean/gitlab-bundle",
     "license": "MIT",
     "type": "symfony-bundle",
-    "description": "The Bundle base to fork",
+    "description": "Gitlab specific features of chaplean-staff",
     "authors": [
         {
             "name": "Chaplean",
@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Chaplean\\Bundle\\BundleNameBundle\\": ""
+            "Chaplean\\Bundle\\GitlabBundle\\": ""
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Chaplean\\Bundle\\BundleNameBundle\\": "Tests/"
+            "Tests\\Chaplean\\Bundle\\GitlabBundle\\": "Tests/"
         }
     },
     "repositories": [
@@ -27,17 +27,19 @@
     ],
     "require": {
         "php": ">=7.1",
+        "chaplean/doctrine-extensions-bundle": "^4.0",
+        "doctrine/doctrine-bundle": "^1.6",
+        "chaplean/form-handler-bundle": "v3.0.0-rc.1",
+        "chaplean/gitlab-client-bundle": "^1.0",
         "symfony/config": "^3.0 || ^4.0",
         "symfony/console": "^3.0 || ^4.0",
         "symfony/dependency-injection": "^3.0 || ^4.0",
         "symfony/yaml": "^3.0 || ^4.0"
     },
     "require-dev": {
-        "chaplean/codeship-scripts": "^1.0",
         "chaplean/coding-standard": "^1.1",
+        "chaplean/unit-bundle": "^7.2",
         "mockery/mockery": "dev-master",
-        "phpunit/phpunit": "^6.3",
-        "satooshi/php-coveralls": "dev-master",
         "symfony/http-kernel": "^2.8 || ^3.0 || ^4.0",
         "symfony/var-dumper": "^2.8 || ^3.0 || ^4.0"
     },

@@ -1,3 +1,2 @@
-#BundleName_index:
-#    path: /
-#    defaults: { _controller: ChapleanBundleNameBundle:Default:index }
+app_gitlab_front:
+    resource: "@ChapleanGitlabBundle/Resources/config/routing_front.yml"
