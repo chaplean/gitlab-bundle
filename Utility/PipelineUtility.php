@@ -2,7 +2,7 @@
 
 namespace Chaplean\Bundle\GitlabBundle\Utility;
 
-use Chaplean\Bundle\GitlabBundle\Api\GitlabApi;
+use Chaplean\Bundle\GitlabClientBundle\Api\GitlabApi;
 use Chaplean\Bundle\GitlabBundle\Form\Handler\ExceptionFailureHandler;
 use Chaplean\Bundle\GitlabBundle\Form\Handler\ForwardDataSuccessHandler;
 use Chaplean\Bundle\GitlabBundle\Form\Type\PipelineType;

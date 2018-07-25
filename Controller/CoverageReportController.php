@@ -22,7 +22,7 @@ class CoverageReportController extends Controller
      */
     public function indexAction($sha, $file)
     {
-        $gitlabBundleConfig = $this->getParameter('chaplean_gitlab_client.config');
+        $gitlabBundleConfig = $this->getParameter('chaplean_gitlab.config');
         $kernelRootDir = $this->getParameter('kernel.root_dir');
         $uploadsDir = $this->getParameter('coverages_dir');
         $coverageReportDir = $gitlabBundleConfig['coverage_report_dir'];

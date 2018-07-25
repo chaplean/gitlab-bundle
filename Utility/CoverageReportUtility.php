@@ -2,7 +2,7 @@
 
 namespace Chaplean\Bundle\GitlabBundle\Utility;
 
-use Chaplean\Bundle\GitlabBundle\Api\GitlabApi;
+use Chaplean\Bundle\GitlabClientBundle\Api\GitlabApi;
 use Monolog\Logger;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Filesystem\Filesystem;

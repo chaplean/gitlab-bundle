@@ -2,7 +2,7 @@
 
 namespace Tests\Chaplean\Bundle\GitlabBundle\Utility;
 
-use Chaplean\Bundle\GitlabBundle\Api\GitlabApi;
+use Chaplean\Bundle\GitlabClientBundle\Api\GitlabApi;
 use Chaplean\Bundle\GitlabBundle\Model\PipelineModel;
 use Chaplean\Bundle\GitlabBundle\Utility\PipelineUtility;
 use Chaplean\Bundle\FormHandlerBundle\Form\FormHandler;

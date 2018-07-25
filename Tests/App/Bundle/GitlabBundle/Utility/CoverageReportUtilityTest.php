@@ -2,7 +2,7 @@
 
 namespace Tests\Chaplean\Bundle\GitlabBundle\Utility;
 
-use Chaplean\Bundle\GitlabBundle\Api\GitlabApi;
+use Chaplean\Bundle\GitlabClientBundle\Api\GitlabApi;
 use Chaplean\Bundle\GitlabBundle\Utility\CoverageReportUtility;
 use Chaplean\Bundle\RestClientBundle\Api\Response\Success\JsonResponse;
 use Chaplean\Bundle\RestClientBundle\Api\Route;
