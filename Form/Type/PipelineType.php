@@ -2,7 +2,6 @@
 
 namespace Chaplean\Bundle\GitlabBundle\Form\Type;
 
-use Chaplean\Bundle\FrontBundle\Form\Type\FloatType;
 use Chaplean\Bundle\GitlabBundle\Model\PipelineModel;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
