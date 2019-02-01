@@ -13,7 +13,7 @@ services:
 
     app_gitlab.utility.coverage_notification:
         class: Chaplean\Bundle\GitlabBundle\Utility\CoverageNotificationUtility
-        arguments: ['@doctrine', '@guzzle.client.gitlab_api', '@router', '%application_host%', '%slack_coverage_notification_url%', '%chaplean_gitlab.config%']
+        arguments: ['@doctrine', '@eight_points_guzzle.client.gitlab_api', '@router', '%application_host%', '%slack_coverage_notification_url%', '%chaplean_gitlab.config%']
 
     app_gitlab.utility.coverage_report:
         class: Chaplean\Bundle\GitlabBundle\Utility\CoverageReportUtility
