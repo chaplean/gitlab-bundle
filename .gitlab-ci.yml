@@ -17,6 +17,7 @@ cache:
 
 before_script:
     - mkdir -p /root/.ssh
+    - cp ./private/ssh/* /root/.ssh/
     - echo -e "Host *\n\tForwardAgent yes\n\n" > /root/.ssh/config
     - echo "$CHAPLEAN_DEPLOY_KEY" >> /root/.ssh/id_rsa && chmod 0600 /root/.ssh/id_rsa
     - eval `ssh-agent -s`
