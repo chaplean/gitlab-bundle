@@ -1,11 +1,12 @@
-version: '2'
+version: '3.3'
 services:
     application:
         container_name: gitlab_bundle_app
         build: .
         volumes:
-            - .:/var/www/symfony
-            - ~/.ssh:/root/.ssh
+            - .:/var/www/symfony:delegated
+            - ~/.composer:/root/.composer
+            - ~/.ssh:/root/.ssh:delegated
         links:
             - mysql:mysql
     mysql:
