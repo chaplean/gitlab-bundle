@@ -28,7 +28,6 @@
                 <directory>DataFixtures/Liip</directory>
                 <directory>Resources</directory>
                 <directory>Tests</directory>
-                <directory>var</directory>
                 <directory>vendor</directory>
             </exclude>
         </whitelist>
